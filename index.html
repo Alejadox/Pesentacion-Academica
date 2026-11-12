@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tarjeta académica | Alejandro Álvarez Caicedo</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<style>
+		* { box-sizing: border-box; }
+		body { margin: 0; min-height: 100vh; padding: 48px 20px; color: #202047; font-family: "DM Sans", sans-serif; background: radial-gradient(circle at 8% 12%, rgba(255,213,106,.8), transparent 25%), radial-gradient(circle at 90% 82%, rgba(255,126,180,.55), transparent 28%), linear-gradient(135deg,#7161f5,#a67af5 48%,#65d8d1); }
+		.page { width: min(100%, 980px); margin: 0 auto; }
+		.hero { position: relative; display: flex; align-items: center; gap: 30px; overflow: hidden; padding: 38px; border: 2px solid rgba(255,255,255,.7); border-radius: 30px; background: linear-gradient(115deg,#fff,#fff8e9); box-shadow: 0 22px 55px rgba(48,34,114,.22); }
+		.hero::after { position: absolute; top: -75px; right: -40px; width: 220px; height: 220px; border: 28px solid rgba(255,190,67,.2); border-radius: 50%; content: ""; pointer-events: none; }
+		.profile-photo { position: relative; z-index: 1; flex: 0 0 146px; width: 146px; height: 146px; border: 7px solid #fff; border-radius: 50%; background: linear-gradient(135deg,#ffd36b,#ff8eac); box-shadow: 0 8px 24px rgba(70,47,133,.2); object-fit: cover; }
+		.hero-copy { position: relative; z-index: 1; }
+		.eyebrow { display: inline-block; margin: 0 0 10px; padding: 7px 12px; border-radius: 999px; color: #593bc5; background: #eee8ff; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+		h1,h2,h3 { font-family: "Space Grotesk",sans-serif; }
+		h1 { margin: 0; font-size: clamp(2rem,5vw,3.2rem); line-height: 1.08; }
+		.subtitle { margin: 12px 0 0; color: #646585; font-size: 1.08rem; }
+		.section-title { display: flex; align-items: center; gap: 10px; margin: 34px 0 16px; font-size: 1.35rem; }
+		.grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+		.card { padding: 23px; border: 1px solid rgba(255,255,255,.75); border-radius: 22px; box-shadow: 0 12px 28px rgba(48,34,114,.13); transition: transform .22s ease,box-shadow .22s ease; }
+		.card:hover { transform: translateY(-6px) rotate(-.3deg); box-shadow: 0 18px 34px rgba(48,34,114,.2); }
+		.card h3 { margin: 0 0 9px; font-size: 1.12rem; }
+		.card p { margin: 0; color: #4e4e6d; line-height: 1.7; }
+		.lavender { background: #eee8ff; } .peach { background: #ffe6d8; } .mint { background: #d8f8ed; } .yellow { background: #fff2bd; } .pink { background: #ffe0ed; } .blue { background: #dcecff; }
+		.interest-list { display: flex; flex-wrap: wrap; gap: 9px; margin: 15px 0 0; padding: 0; list-style: none; }
+		.interest-list li { padding: 8px 12px; border: 1px solid rgba(57,48,102,.1); border-radius: 999px; background: rgba(255,255,255,.7); font-size: .92rem; font-weight: 600; }
+		.study-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+		.study-card { padding: 20px 12px; border-radius: 20px; text-align: center; box-shadow: 0 10px 24px rgba(48,34,114,.13); transition: transform .22s ease; }
+		.study-card:hover { transform: translateY(-5px) scale(1.03); }
+		.emoji { display: block; margin-bottom: 8px; font-size: 2rem; }
+		.study-card strong { font-family: "Space Grotesk",sans-serif; }
+		.contact { margin-top: 30px; padding: 25px; border-radius: 22px; color: white; text-align: center; background: linear-gradient(110deg,#4938bd,#8054d9 60%,#a64cb6); box-shadow: 0 14px 30px rgba(48,34,114,.22); }
+		.contact h2 { margin: 0 0 8px; } .contact p { margin: 0; color: #f0eaff; } .contact a { color: #fff2a8; font-weight: 700; text-underline-offset: 4px; }
+		a:focus-visible { outline: 3px solid #ffe27a; outline-offset: 4px; }
+		@media (max-width: 640px) { body { padding: 24px 14px; } .hero { flex-direction: column; gap: 18px; padding: 28px 20px; text-align: center; } .profile-photo { flex-basis: 126px; width: 126px; height: 126px; } .grid { grid-template-columns: 1fr; gap: 14px; } .study-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .section-title { margin-top: 28px; } }
+		@media (prefers-reduced-motion: reduce) { *,*::before,*::after { transition-duration: .01ms !important; } }
+	</style>
+</head>
+<body>
+	<main class="page">
+		<header class="hero">
+			<!-- Cambia foto.jpg por el nombre o la ruta de tu foto de perfil. -->
+			<img class="profile-photo" src="alejo.jpeg" alt="Foto de perfil de Alejandro Álvarez Caicedo">
+			<div class="hero-copy">
+				<p class="eyebrow">Tarjeta de presentación académica</p>
+				<!-- Cambia aquí tu nombre y la frase que aparece debajo. -->
+				<h1>Alejandro Álvarez Caicedo</h1>
+				<p class="subtitle">Curiosidad, creatividad y tecnología para construir el futuro.</p>
+			</div>
+		</header>
+		<section aria-labelledby="presentacion">
+			<h2 class="section-title" id="presentacion"><span aria-hidden="true">👋</span> Un poco sobre mí</h2>
+			<!-- Reemplaza este texto de ejemplo con tu presentación personal. -->
+			<article class="card lavender"><p>¡Hola! Soy Alejandro, una persona curiosa a la que le gusta aprender cómo funcionan las cosas. Disfruto explorar nuevas ideas, resolver retos y descubrir cómo la tecnología puede ayudar a las personas.</p></article>
+		</section>
+		<section aria-labelledby="aspiracion">
+			<h2 class="section-title" id="aspiracion"><span aria-hidden="true">🎓</span> Mi aspiración educativa</h2>
+			<!-- Personaliza aquí tu carrera y las razones para elegirla. -->
+			<article class="card yellow"><h3>Ingeniería Electrónica</h3><p>Quiero estudiar Ingeniería Electrónica para aprender a diseñar y crear soluciones tecnológicas que conecten ideas con el mundo real.</p></article>
+		</section>
+		<div class="grid">
+			<section aria-labelledby="tecnologia">
+				<h2 class="section-title" id="tecnologia"><span aria-hidden="true">💡</span> Intereses tecnológicos</h2>
+				<!-- Edita los ejemplos de intereses tecnológicos. -->
+				<article class="card mint"><ul class="interest-list"><li>Inteligencia artificial</li><li>Computadores</li><li>Innovación digital</li><li>Diseño de aplicaciones</li></ul></article>
+			</section>
+			<section aria-labelledby="otros-intereses">
+				<h2 class="section-title" id="otros-intereses"><span aria-hidden="true">🌟</span> Otros intereses</h2>
+				<!-- Cambia estos ejemplos por tus intereses personales o académicos. -->
+				<article class="card peach"><ul class="interest-list"><li>Música</li><li>Lectura</li><li>Deportes</li><li>Trabajo en equipo</li></ul></article>
+			</section>
+		</div>
+		<section aria-labelledby="areas">
+			<h2 class="section-title" id="areas"><span aria-hidden="true">🧠</span> Áreas que me gustaría estudiar</h2>
+			<!-- Puedes cambiar los emojis y las áreas de estudio. -->
+			<div class="study-grid">
+				<article class="study-card pink"><span class="emoji" aria-hidden="true">🔌</span><strong>Electrónica</strong></article>
+				<article class="study-card blue"><span class="emoji" aria-hidden="true">💻</span><strong>Programación</strong></article>
+				<article class="study-card mint"><span class="emoji" aria-hidden="true">🤖</span><strong>Robótica</strong></article>
+				<article class="study-card yellow"><span class="emoji" aria-hidden="true">📐</span><strong>Matemáticas</strong></article>
+			</div>
+		</section>
+		<footer class="contact">
+			<h2>¡Conectemos!</h2>
+			<!-- Cambia el correo de ejemplo en el texto y en el enlace mailto. -->
+			
+		</footer>
+	</main>
+</body>
+</html>
